@@ -1,6 +1,6 @@
 import pygame
 
-def main():
+def draw():
     # инициализируем библиотеку PyGame
     pygame.init()
     pygame.font.init()

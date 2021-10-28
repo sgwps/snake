@@ -1,24 +1,28 @@
 import pygame
 import snake
+import surface
+from random import randint
 
 
-position = ()
+position = (6, 0)
 # image =...
 color = [255, 0, 0]
 
 
 def change_position():
-    pass
-    # randint, пока не выпадает на точку змеи
+    global position
+    position = (randint(1, 40), randint(1, 40))
 
-def check(self):
+
+def check():
     if position == snake.pos[-1]:
         change_position()
         return True
     else:
         return False
 
-def draw(self, screen, radius = 5):
-    pygame.draw.circle(screen, color, self.positions, radius)
-    #pass
 
+def draw(screen, radius = 5):
+    s, x, y = surface.get_params()
+
+    pygame.draw.circle(screen, color, (x + position[0] * s + 7, y + position[1] * s + 7), radius)
