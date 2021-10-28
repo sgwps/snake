@@ -18,6 +18,8 @@ def get_borders():
 
 
 def draw_surface(screen):
+    screen.fill([0, 0, 0])
+
     col1 = [170, 215, 81]
     col2 = [162, 209, 73]
     pygame.draw.rect(screen, col1, (x, y, 600, 600))
