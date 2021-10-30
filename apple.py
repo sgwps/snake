@@ -11,7 +11,7 @@ color = [255, 0, 0]
 
 def change_position():
     global position
-    position = (randint(1, 40), randint(1, 40))
+    position = (randint(0, 39), randint(0, 39))
 
 
 def check():
